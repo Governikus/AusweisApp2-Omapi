@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="320" height="500" viewBox="0 0 320 500">
+  <defs>
+    <path id="sim" d="M 53 65 a 5 5 0 0 0 -5 5 v 51 a 5 5 0 0 0 5 5 h 53 a 5 5 0 0 0 5 -5 v -51 a 5 5 0 0 0 -5 -5 h -53 Z
+             m 36.4 5 v 15 h -19.4 v -15 h 19.4 Z
+             m -36.4 0 h 14.5 v 15 h -14.5 v -15 Z
+             m 0 51.4 v -15 h 14.5 v 15 h -14.5 Z
+             m 17 0 v -15 h 19.4 v 15 h -19.4 Z
+             m 36.4 0 h -14.5 v -17 h -39 v -17 h 53.5 v 34.2 Z
+             m 0 -51.4 v 15 h -14.5 v -15 h 14.5 Z
+             M 99 9 h -63 a 5 5 0 0 0 -5 5 v 127 a 5 5 0 0 0 5 5 h 87 a 5 5 0 0 0 5 -5 v -102.5 Z
+             m 21.8 129.6 h -82.5 v -122 h 57.5 l 25 25 Z" fill="#ffffff"/>
+  </defs>
+  <rect x="0" y="0" width="320" height="500" rx="20" ry="20" fill="#444445" />
+  <circle cx="160" cy="220" r="80" fill="#659ccd" />
+  <path d="m40 40 h240 v360 h-240 v-360 m40,180 a80,80,0 0 0 160,0 a80,80,0 0 0 -160,0 Z" fill="#eef5fb" />
+  <use xlink:href="#sim" x="134" y="216" transform="scale(0.75, 0.75)" />
+</svg>

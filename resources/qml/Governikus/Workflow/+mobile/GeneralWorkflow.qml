@@ -51,4 +51,12 @@ SectionPage
 		onContinueWorkflow: workflowModel.continueWorkflow()
 		onRequestPluginType: workflowModel.readerPlugInType = pReaderPlugInType;
 	}
+
+	OmapiWorkflow
+	{
+		anchors.fill: parent
+		waitingFor: baseItem.waitingFor
+		visible: d.readerPlugInType === ReaderPlugIn.OMAPI
+		onRequestPluginType: workflowModel.readerPlugInType = pReaderPlugInType;
+	}
 }

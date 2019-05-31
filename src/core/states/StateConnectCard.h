@@ -28,6 +28,9 @@ class StateConnectCard
 		void onReaderRemoved(const QString& pReaderName);
 		void onAbort();
 
+	public:
+		void onEntry(QEvent* pEvent) override;
+
 	Q_SIGNALS:
 		void fireRetry();
 		void fireReaderRemoved();

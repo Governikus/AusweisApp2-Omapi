@@ -157,7 +157,17 @@
             </intent-filter>
         </service>
 
+
+        <!-- IVID / OMAPI activity used for authentication -->
+
+        <activity
+                android:name="com.governikus.ausweisapp2.omapi.impl.OmapiSecretFetcherImpl"
+                android:label="IVID" />
+
+       <!-- used libraries, possibly obsolete -->
+        <uses-library android:name="org.simalliance.openmobileapi" android:required="false" />
     </application>
+
     <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="26"/>
     <supports-screens android:largeScreens="true" android:normalScreens="true" android:anyDensity="true" android:smallScreens="true"/>
 
@@ -172,6 +182,9 @@
     <uses-permission android:name="android.permission.NFC"/>
     <!-- Dangerous Permissions -->
     <uses-permission-sdk-23 android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 
     <!-- The following comment will be replaced upon deployment with default features based on the dependencies of the application.
          Remove the comment if you do not require these default features. -->

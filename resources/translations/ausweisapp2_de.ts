@@ -1307,6 +1307,25 @@
     </message>
 </context>
 <context>
+    <name>OmapiWorkflow</name>
+    <message>
+        <source>Continue</source>
+        <translation>Fortsetzen</translation>
+    </message>
+    <message>
+        <source>Please confirm the usage of your mobile eID.</source>
+        <translation>Bitte bestätigen Sie die Verwendung ihrer mobilen eID.</translation>
+    </message>
+    <message>
+        <source>No mobile eID found</source>
+        <translation>Keine mobile eID gefunden</translation>
+    </message>
+    <message>
+        <source>Please ensure that a SIM card is inserted and a suitable mobile eID is stored there.</source>
+        <translation>Bitte stellen Sie sicher, dass eine SIM-Karte eingelegt ist und eine passende mobile eID hinterlegt ist.</translation>
+    </message>
+</context>
+<context>
     <name>PinSettingsWidget</name>
     <message>
         <source>Please pay attention to the display of your card reader.</source>
@@ -2125,6 +2144,10 @@ Bitte beachten Sie, dass Sie mit Ihrer PUK lediglich Ihren Online-Ausweis entspe
     <message>
         <source>Use Bluetooth card reader instead&lt;br/&gt;of remote card reader</source>
         <translation>Bluetooth Kartenlesegerät anstelle &lt;br/&gt;vom WLAN Kartenlesegerät verwenden</translation>
+    </message>
+    <message>
+        <source>meID</source>
+        <translation>meID</translation>
     </message>
 </context>
 <context>

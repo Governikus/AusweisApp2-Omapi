@@ -52,6 +52,7 @@ Q_IMPORT_PLUGIN(NfcReaderManagerPlugIn)
 
 #ifndef ANDROID_BUILD_AAR
 Q_IMPORT_PLUGIN(IntentActivationHandler)
+Q_IMPORT_PLUGIN(OmapiReaderManagerPlugIn)
 #endif
 
 #endif

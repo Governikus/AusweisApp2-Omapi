@@ -23,8 +23,6 @@ void StateConnectCard::run()
 	const auto readerManager = Env::getSingleton<ReaderManager>();
 	mConnections += connect(readerManager, &ReaderManager::fireCardInserted, this, &StateConnectCard::onCardInserted);
 	mConnections += connect(readerManager, &ReaderManager::fireReaderRemoved, this, &StateConnectCard::onReaderRemoved);
-	mConnections += connect(getContext().data(), &WorkflowContext::fireAbortCardSelection, this, &StateConnectCard::onAbort);
-	mConnections += connect(getContext().data(), &WorkflowContext::fireReaderPlugInTypesChanged, this, &StateConnectCard::fireRetry);
 	onCardInserted();
 }
 
@@ -81,4 +79,21 @@ void StateConnectCard::onAbort()
 		readerManager->disconnectReader(readerInfo.getName());
 	}
 	Q_EMIT fireRetry();
+}
+
+
+void StateConnectCard::onEntry(QEvent* pEvent)
+{
+	const WorkflowContext* const context = getContext().data();
+	Q_ASSERT(context);
+
+	mConnections += connect(context, &WorkflowContext::fireAbortCardSelection, this, &StateConnectCard::onAbort);
+
+	/*
+	 * Note: the plugin types to be used in this state must be already set in the workflow context before this state is entered.
+	 * Changing the plugin types in the context, e.g. from {NFC} to {BLUETOOTH}, causes the state to be left with a fireRetry signal.
+	 */
+	mConnections += connect(context, &WorkflowContext::fireReaderPlugInTypesChanged, this, &StateConnectCard::fireRetry);
+
+	AbstractGenericState::onEntry(pEvent);
 }

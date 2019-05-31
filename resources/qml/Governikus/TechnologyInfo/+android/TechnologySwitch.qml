@@ -38,5 +38,12 @@ Rectangle {
 			imageSource: "qrc:///images/icon_bluetooth.svg"
 			text: qsTr("Bluetooth") + settingsModel.translationTrigger
 		}
+
+		TechnologySwitchButton {
+			buttonActive: selectedTechnology !== ReaderPlugIn.OMAPI
+			onClicked: baseItem.requestPluginType(ReaderPlugIn.OMAPI)
+			imageSource: "qrc:///images/icon_omapi.svg"
+			text: qsTr("meID") + settingsModel.translationTrigger
+		}
 	}
 }

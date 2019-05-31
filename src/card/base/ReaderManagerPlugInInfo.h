@@ -15,7 +15,7 @@
 namespace governikus
 {
 
-defineEnumType(ReaderManagerPlugInType, UNKNOWN, PCSC, BLUETOOTH, NFC, REMOTE)
+defineEnumType(ReaderManagerPlugInType, UNKNOWN, PCSC, BLUETOOTH, NFC, REMOTE, OMAPI)
 
 
 class ReaderManagerPlugInInfo

@@ -24,7 +24,8 @@ StateSelectReader::StateSelectReader(const QSharedPointer<WorkflowContext>& pCon
 bool StateSelectReader::requiresCard(ReaderManagerPlugInType pPlugInType)
 {
 	return pPlugInType == ReaderManagerPlugInType::PCSC ||
-		   pPlugInType == ReaderManagerPlugInType::REMOTE;
+		   pPlugInType == ReaderManagerPlugInType::REMOTE ||
+		   pPlugInType == ReaderManagerPlugInType::OMAPI;
 }
 
 

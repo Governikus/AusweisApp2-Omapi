@@ -82,7 +82,11 @@ Item {
 				}
 				break
 			case "StateConnectCard":
-				setPinWorkflowStateAndContinue(ChangePinController.WorkflowStates.Card)
+				if (d.readerPlugInType === ReaderPlugIn.OMAPI) {
+					controller.workflowState = IdentifyController.WorkflowStates.Card
+				} else {
+					setIdentifyWorkflowStateAndContinue(IdentifyController.WorkflowStates.Card)
+				}
 				break
 			case "StatePreparePace":
 				fireReplace(pinProgressView)

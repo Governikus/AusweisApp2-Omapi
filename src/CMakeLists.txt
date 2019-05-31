@@ -206,6 +206,7 @@ IF(ANDROID)
 	TARGET_LINK_LIBRARIES(AusweisApp AusweisAppCardNfc)
 	IF(NOT ANDROID_BUILD_AAR)
 		TARGET_LINK_LIBRARIES(AusweisApp AusweisAppActivationIntent)
+		TARGET_LINK_LIBRARIES(AusweisApp AusweisAppCardOmapi)
 	ENDIF()
 ENDIF()
 

@@ -74,9 +74,11 @@
         <file>images/icon_nfc.svg</file>
         <file>images/icon_remote.svg</file>
         <file>images/icon_bluetooth.svg</file>
+        <file>images/icon_omapi.svg</file>
         <file>images/phone_nfc.svg</file>
         <file>images/phone_remote.svg</file>
         <file>images/phone_bluetooth.svg</file>
+        <file>images/phone_omapi.svg</file>
         <file>images/location_flag_de.svg</file>
         <file>images/location_flag_en.svg</file>
         <file>images/siteWithLogo.png</file>

@@ -111,7 +111,11 @@ Item {
 				}
 				break
 			case "StateConnectCard":
-				setIdentifyWorkflowStateAndContinue(IdentifyController.WorkflowStates.Card)
+				if (d.readerPlugInType === ReaderPlugIn.OMAPI) {
+					controller.workflowState = IdentifyController.WorkflowStates.Card
+				} else {
+					setIdentifyWorkflowStateAndContinue(IdentifyController.WorkflowStates.Card)
+				}
 				break
 			case "StatePreparePace":
 				fireReplace(identifyProgressView)

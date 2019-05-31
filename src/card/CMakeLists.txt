@@ -23,4 +23,8 @@ IF(TARGET Qt5::Bluetooth)
 	ADD_SUBDIRECTORY(bluetooth)
 ENDIF()
 
+IF(ANDROID)
+	ADD_SUBDIRECTORY(omapi)
+ENDIF()
+
 ADD_SUBDIRECTORY(drivers)
